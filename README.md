@@ -1,4 +1,8 @@
-# crud-front-end-vue-js
+# CRUD app front end javascript
+
+clone of the tasty.co website
+
+creating for demonstrating front-end js skills
 
 ## Project setup
 ```
