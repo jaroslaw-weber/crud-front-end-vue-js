@@ -1,8 +1,8 @@
 <template>
-  <section class="hero is-black">
+  <section class="hero">
     <div class="hero-body">
       <div class="container">
-        <h1 class="title">footer</h1>
+        <h1 class="title">featured</h1>
       </div>
     </div>
   </section>

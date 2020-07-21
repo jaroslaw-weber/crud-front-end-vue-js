@@ -1,6 +1,6 @@
 # CRUD app front end javascript
 
-clone of the tasty.co website
+clone of the https://tasty.co website
 
 creating for demonstrating front-end js skills
 
