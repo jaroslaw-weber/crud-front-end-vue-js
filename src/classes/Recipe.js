@@ -13,8 +13,9 @@ export default class Recipe {
 	static getDummy() {
 		let r = new Recipe();
 		r.author = `${faker.Name.firstName()} ${faker.Name.lastName()}`;
-		r.title = faker.Lorem.sentence();
-		r.image = `${faker.Image.food()}?random=${faker.random.number(100000)}`
+		r.title = `${faker.random.catch_phrase_adjective()} ${faker.random.catch_phrase_noun()}`;
+		let recipeNo = faker.random.number(4);
+		r.image = `images/recipes/recipe${recipeNo}.jpg`
 		console.log(r.image)
 		return r;
 	}

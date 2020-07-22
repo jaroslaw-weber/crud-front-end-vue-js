@@ -1,8 +1,10 @@
 <template>
   <div id="app">
     <Header />
-    <CardList title="trending recipes" :listData="trending" />
-    <CardList title="recent recipes" :listData="recent" />
+    <div class="list-container">
+      <CardList title="trending recipes" :listData="trending" />
+      <CardList title="recent recipes" :listData="recent" />
+    </div>
     <Newsletter />
     <Footer />
   </div>
@@ -57,5 +59,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+.list-container {
 }
 </style>
