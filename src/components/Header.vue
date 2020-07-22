@@ -50,12 +50,17 @@ export default {
 
 <style scoped>
 .header {
+  /*sticky header*/
+  position: fixed;
+  top: 0;
+  z-index: 1000; /*move header to the front, without it header is under images*/
+
   background-color: #18c1ee;
   height: 2rem;
   font-family: "Raleway", sans-serif;
   font-size: 1.4rem;
-  widows: 100%;
-  height: 4.5rem;
+  width: 100%;
+  height: 3.5rem;
   color: white;
 }
 .header-item-container {
