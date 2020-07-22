@@ -1,6 +1,6 @@
 <template>
-  <div class="card-list">
-    <p>{{title}}</p>
+  <div class="card-list is-centered">
+    <p class="list-name">{{titleFormatted}}</p>
 
     <div class="grid">
       <div v-for="elementData in listData" :key="elementData.id">
@@ -21,10 +21,21 @@ export default {
   props: {
     title: String,
     listData: Array // arr of Recipe
+  },
+  computed: {
+    titleFormatted: function() {
+      return this.title.toUpperCase();
+    }
   }
 };
 </script>
 <style scoped>
+.list-name {
+  font-family: "Raleway", sans-serif;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #f43192;
+}
 .card-list {
   margin: 3rem;
   text-align: left;
@@ -36,12 +47,12 @@ export default {
 }
 @media (max-width: 800px) {
   .grid {
-    grid-template-columns: 45% 45%;
+    grid-template-columns: 50% 50%;
   }
 }
 @media (min-width: 800px) {
   .grid {
-    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-columns: 24% 24% 24% 24%;
   }
 }
 .grid-element {

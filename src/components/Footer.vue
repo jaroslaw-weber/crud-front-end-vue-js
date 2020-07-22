@@ -1,9 +1,14 @@
 <template>
-  <section class="hero is-black">
-    <div class="hero-body">
-      <div class="container">
-        <h1 class="title">footer</h1>
-      </div>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p>footer</p>
     </div>
-  </section>
+  </footer>
 </template>
+<style scoped>
+.footer {
+  background-color: #222;
+  color: white;
+  padding: 1rem;
+}
+</style>

@@ -5,8 +5,8 @@
         <img class="card-image" :src="cardData.image" />
       </div>
     </div>
-    <p>{{cardData.title}}</p>
-    <p>Presented by {{cardData.author}}</p>
+    <p class="card-title">{{cardData.title}}</p>
+    <!-- <p>Presented by {{cardData.author}}</p>-->
   </div>
 </template>
 <script>
@@ -19,18 +19,24 @@ export default {
 <style scoped>
 .card-image {
   border-radius: 2%;
+
+  /*animation*/
   transform-origin: 50% 50%;
   transition: 0.2s ease-in-out;
 
+  /*stuff necessary to zoom animation effect*/
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+
+  /* don't stretch images */
+  object-fit: cover;
 }
 .card-image-parent {
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /*part of animation effect*/
   width: 100%;
   height: auto;
   padding-top: 100%;
@@ -40,5 +46,8 @@ export default {
 
 .card-image:hover {
   transform: scale(1.1);
+}
+.card-title {
+  font-family: "Raleway", sans-serif;
 }
 </style>
