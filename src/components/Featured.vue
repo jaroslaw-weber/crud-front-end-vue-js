@@ -5,7 +5,11 @@
         <span class="highlight-text">TRY THIS</span>
         <br class="try-this-space" />
 
-        <span class="highlight-text huge-text">Pizza with a lot of cheese, over 4000 calories</span>
+        <div class="huge-text-container">
+          <span
+            class="highlight-text huge-text hanging-indent"
+          >Pizza with a lot of cheese, over 4000 calories</span>
+        </div>
       </div>
       <div class="column">
         <img class="big-image" src="images/recipes/recipe1.jpg" />
@@ -14,6 +18,10 @@
   </div>
 </template>
 <style scoped>
+.hanging-indent {
+  text-indent: 2rem;
+  margin-left: -2rem;
+}
 .highlight-text {
   background-color: yellow;
 
@@ -22,6 +30,9 @@
 }
 .try-this-space {
   margin-bottom: 1.5rem;
+}
+.huge-text-container {
+  margin-left: 2rem;
 }
 .huge-text {
   font-size: 4rem;
