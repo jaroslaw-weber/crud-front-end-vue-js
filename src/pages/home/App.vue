@@ -2,6 +2,7 @@
   <div id="app">
     <Header />
     <div class="list-container">
+      <Featured />
       <CardList title="trending recipes" :listData="trending" />
       <CardList title="recent recipes" :listData="recent" />
     </div>
@@ -16,6 +17,7 @@ import CardList from "./../../components/CardList.vue";
 import Newsletter from "../../components/Newsletter.vue";
 import Footer from "../../components/Footer.vue";
 import Recipe from "../../classes/Recipe";
+import Featured from "../../components/Featured.vue";
 
 export default {
   name: "App",
@@ -23,7 +25,8 @@ export default {
     Header,
     CardList,
     Newsletter,
-    Footer
+    Footer,
+    Featured
   },
   data: function() {
     return {
