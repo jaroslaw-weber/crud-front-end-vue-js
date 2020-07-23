@@ -38,8 +38,8 @@
   font-size: 4rem;
 }
 .big-image {
-  width: 26rem;
-  height: 16rem;
+  width: 24rem;
+  height: 14rem;
 }
 .featured {
   margin-left: 3rem;

@@ -1,8 +1,14 @@
 # CRUD app front end javascript
 
-clone of the https://tasty.co website
+Clone of the https://tasty.co website.
 
-creating for demonstrating front-end js skills
+Created for demonstrating front-end javascript skills.
+
+## TODO
+
+- vue router for better urls
+
+======
 
 ## Project setup
 ```

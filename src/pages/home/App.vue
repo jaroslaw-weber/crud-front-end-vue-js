@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <div class="list-container">
+    <div class="content-wrap">
       <Featured />
       <CardList title="trending recipes" :listData="trending" />
       <CardList title="recent recipes" :listData="recent" />
@@ -63,7 +63,9 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-.list-container {
-  margin-top: 7rem;
+.content-wrap {
+  margin-top: 7rem !important;
+  max-width: 75rem;
+  margin: auto;
 }
 </style>

@@ -1,10 +1,12 @@
 <template>
   <div class="header">
-    <div class="header-item-container columns">
-      <div class="column header-item">Recipes</div>
-      <div class="column header-item">Quarantine Cooking</div>
-      <div class="column header-item">Shop</div>
-      <div class="column header-item search-container">
+    <div class="header-item-container">
+      <div class="header-item">
+        <p>Recipes</p>
+      </div>
+      <div class="header-item">Quarantine Cooking</div>
+      <div class="header-item">Shop</div>
+      <div class="header-item search-container">
         <SearchBar />
       </div>
     </div>
@@ -64,12 +66,18 @@ export default {
   color: white;
 }
 .header-item-container {
+  max-width: 75rem;
+  height: 100%;
 }
 .search-container {
   margin-right: 1rem;
 }
 .header-item {
-  padding-top: 1.5rem;
+  vertical-align: middle;
+  padding-top: 0.6rem; /*todo: vertical centering*/
+  padding-left: 2rem;
+  display: inline-block;
+  height: 100%;
 }
 .header-item:hover {
   color: yellow;

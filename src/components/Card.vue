@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class>
+    <div class="card">
       <div class="card-image-parent">
         <img class="card-image" :src="cardData.image" />
       </div>
