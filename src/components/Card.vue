@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <a :href="cardData.uri">
     <div class="card">
       <div class="card-image-parent">
         <img class="card-image" :src="cardData.image" />
@@ -7,13 +7,13 @@
     </div>
     <p class="card-title">{{cardData.title}}</p>
     <!-- <p>Presented by {{cardData.author}}</p>-->
-  </div>
+  </a>
 </template>
 <script>
 export default {
   props: {
-    cardData: Object
-  }
+    cardData: Object,
+  },
 };
 </script>
 <style scoped>
@@ -49,5 +49,23 @@ export default {
 }
 .card-title {
   font-family: "Raleway", sans-serif;
+}
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: black;
+}
+
+/* mouse over link */
+a:hover {
+  color: #18c1ee;
+}
+
+/* selected link */
+a:active {
+  color: #18c1ee;
 }
 </style>

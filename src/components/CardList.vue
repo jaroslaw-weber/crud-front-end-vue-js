@@ -16,17 +16,17 @@ import Card from "./Card.vue";
 
 export default {
   components: {
-    Card
+    Card,
   },
   props: {
     title: String,
-    listData: Array // arr of Recipe
+    listData: Array, // arr of Recipe
   },
   computed: {
-    titleFormatted: function() {
+    titleFormatted: function () {
       return this.title.toUpperCase();
-    }
-  }
+    },
+  },
 };
 </script>
 <style scoped>
@@ -37,7 +37,8 @@ export default {
   color: #f43192;
 }
 .card-list {
-  margin: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   text-align: left;
 }
 .grid {

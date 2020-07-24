@@ -13,9 +13,11 @@ export default class Recipe {
 	static getDummy() {
 		let r = new Recipe();
 		r.author = `${faker.Name.firstName()} ${faker.Name.lastName()}`;
-		r.title = `${faker.random.catch_phrase_adjective()} ${faker.random.catch_phrase_noun()}`;
+		let recipeTitle = `${faker.random.catch_phrase_adjective()} ${faker.random.catch_phrase_noun()}`
+		r.title = recipeTitle;
 		let recipeNo = faker.random.number(4);
 		r.image = `images/recipes/recipe${recipeNo}.jpg`
+		r.uri = "recipe/" + recipeTitle.replace(" ", "-").toLowerCase();
 		console.log(r.image)
 		return r;
 	}

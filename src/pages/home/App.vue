@@ -1,10 +1,11 @@
 <template>
   <div id="app">
     <Header />
-    <div class="content-wrap">
+    <div class="content-wrap content-width">
       <Featured />
       <CardList title="trending recipes" :listData="trending" />
       <CardList title="recent recipes" :listData="recent" />
+      <b-button class="show-more" @click="showMore()">Show more</b-button>
     </div>
     <Newsletter />
     <Footer />
@@ -26,15 +27,22 @@ export default {
     CardList,
     Newsletter,
     Footer,
-    Featured
+    Featured,
   },
-  data: function() {
+  methods: {
+    showMore: function () {
+      for (let index = 0; index < 16; index++) {
+        this.recent.push(Recipe.getDummy());
+      }
+    },
+  },
+  data: function () {
     return {
       trending: [],
-      recent: []
+      recent: [],
     };
   },
-  mounted: function() {
+  mounted: function () {
     this.trending.push(Recipe.getDummy());
     this.trending.push(Recipe.getDummy());
     this.trending.push(Recipe.getDummy());
@@ -51,7 +59,7 @@ export default {
     this.recent.push(Recipe.getDummy());
     this.recent.push(Recipe.getDummy());
     this.recent.push(Recipe.getDummy());
-  }
+  },
 };
 </script>
 
@@ -65,7 +73,13 @@ export default {
 }
 .content-wrap {
   margin-top: 7rem !important;
-  max-width: 75rem;
   margin: auto;
+}
+
+.content-width {
+  max-width: 75rem;
+}
+.show-more {
+  margin: 2rem;
 }
 </style>

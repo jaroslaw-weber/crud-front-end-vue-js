@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="header-item-container">
+    <div class="header-item-container content-width">
       <div class="header-item">
         <p>Recipes</p>
       </div>
@@ -46,7 +46,7 @@
 <script>
 import SearchBar from "./SearchBar";
 export default {
-  components: { SearchBar }
+  components: { SearchBar },
 };
 </script>
 
@@ -66,8 +66,13 @@ export default {
   color: white;
 }
 .header-item-container {
-  max-width: 75rem;
+  display: flex;
   height: 100%;
+  margin: auto; /*center horizontally*/
+}
+
+.header-item-container div:last-child {
+  margin-left: auto; /*move search bar to the right*/
 }
 .search-container {
   margin-right: 1rem;
@@ -76,7 +81,6 @@ export default {
   vertical-align: middle;
   padding-top: 0.6rem; /*todo: vertical centering*/
   padding-left: 2rem;
-  display: inline-block;
   height: 100%;
 }
 .header-item:hover {
