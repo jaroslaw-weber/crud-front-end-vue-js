@@ -4,9 +4,16 @@ Clone of the https://tasty.co website.
 
 Created for demonstrating front-end javascript skills.
 
+You can see preview at:
+
+https://jaroslaw-weber.github.io/crud-front-end-vue-js/
+
 ## TODO
 
 - vue router for better urls
+- improve layout on mobile
+- add search feature
+- add more features
 
 ======
 
