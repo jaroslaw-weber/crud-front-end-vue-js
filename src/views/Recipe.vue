@@ -72,6 +72,7 @@ export default {
       recipe: Object,
     };
   },
+
   mounted: function () {
     this.recipe = Recipe.getDummy();
   },
