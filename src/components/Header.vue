@@ -1,6 +1,9 @@
 <template>
   <div class="header">
     <div class="header-item-container content-width">
+      <router-link :to="'/'" class="header-item">
+        <p>Home</p>
+      </router-link>
       <div class="header-item">
         <p>Recipes</p>
       </div>
@@ -82,6 +85,9 @@ export default {
   padding-top: 0.6rem; /*todo: vertical centering*/
   padding-left: 2rem;
   height: 100%;
+}
+a {
+  color: white !important;
 }
 .header-item:hover {
   color: yellow;

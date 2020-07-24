@@ -16,9 +16,10 @@ export default class Recipe {
 		let recipeTitle = `${faker.random.catch_phrase_adjective()} ${faker.random.catch_phrase_noun()}`
 		r.title = recipeTitle;
 		let recipeNo = faker.random.number(4);
-		r.image = `images/recipes/recipe${recipeNo}.jpg`
-		r.uri = "recipe/" + recipeTitle.replace(" ", "-").toLowerCase();
-		console.log(r.image)
+		r.image = `/images/recipes/recipe${recipeNo}.jpg`
+		r.uri = recipeTitle.replace(" ", "-").toLowerCase();
+		r.description = faker.Lorem.sentences(7);
+		r.time = { "totalTime": 30, "prepTime": 25, "cookTime": 45 };
 		return r;
 	}
 }

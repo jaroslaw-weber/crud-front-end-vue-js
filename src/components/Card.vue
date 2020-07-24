@@ -1,5 +1,5 @@
 <template>
-  <a :href="cardData.uri">
+  <router-link :to="{ name: 'recipe', params: { title:cardData.uri }}">
     <div class="card">
       <div class="card-image-parent">
         <img class="card-image" :src="cardData.image" />
@@ -7,7 +7,7 @@
     </div>
     <p class="card-title">{{cardData.title}}</p>
     <!-- <p>Presented by {{cardData.author}}</p>-->
-  </a>
+  </router-link>
 </template>
 <script>
 export default {

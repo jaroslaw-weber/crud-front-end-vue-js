@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div class="home">
     <Header />
     <div class="content-wrap content-width">
       <Featured />
@@ -13,15 +13,17 @@
 </template>
 
 <script>
-import Header from "./../../components/Header.vue";
-import CardList from "./../../components/CardList.vue";
-import Newsletter from "../../components/Newsletter.vue";
-import Footer from "../../components/Footer.vue";
-import Recipe from "../../classes/Recipe";
-import Featured from "../../components/Featured.vue";
+// @ is an alias to /src
+
+import Header from "@/components/Header.vue";
+import CardList from "@/components/CardList.vue";
+import Newsletter from "@/components/Newsletter.vue";
+import Footer from "@/components/Footer.vue";
+import Recipe from "@/classes/Recipe";
+import Featured from "@/components/Featured.vue";
 
 export default {
-  name: "App",
+  name: "Home",
   components: {
     Header,
     CardList,
@@ -62,15 +64,7 @@ export default {
   },
 };
 </script>
-
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 .content-wrap {
   margin-top: 7rem !important;
   margin: auto;
