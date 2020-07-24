@@ -1,4 +1,4 @@
 
 module.exports = {
-	publicPath: './'
+	publicPath: '/crud-front-end-vue-js/'
 }
