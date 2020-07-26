@@ -1,6 +1,6 @@
 <template>
   <div class="card-list is-centered">
-    <p class="list-name bold-text">{{titleFormatted}}</p>
+    <p v-if="title" class="list-name bold-text">{{titleFormatted}}</p>
 
     <div class="grid">
       <div v-for="elementData in listData" :key="elementData.id">
@@ -19,7 +19,7 @@ export default {
     Card,
   },
   props: {
-    title: String,
+    title: String, //optional, if no title then dont show
     listData: Array, // arr of Recipe
   },
   computed: {

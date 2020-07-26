@@ -40,11 +40,13 @@
             <Preparation :preparation="recipe.preparation" />
           </div>
         </div>
-        <div>nutrition</div>
       </div>
+      <!--
+      <div>nutrition</div>
       <div>related recipes</div>
       <div>submit recipe</div>
       <div>comments</div>
+      -->
     </div>
     <Newsletter />
     <Footer />
@@ -79,6 +81,7 @@ export default {
 
   mounted: function () {
     this.recipe = Recipe.getDummy();
+    this.recipe.title = this.$route.params.title.replace("-", " ");
   },
 };
 </script>
@@ -120,6 +123,7 @@ export default {
 
 .preparation-and-ingredients {
   display: flex;
+  margin-bottom: 1rem;
 }
 .preparation-ingredients-column {
   flex: 2 3;

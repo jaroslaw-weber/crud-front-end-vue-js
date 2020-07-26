@@ -1,18 +1,27 @@
 <template>
   <div class="header bold-text">
-    <div class="header-item-container content-width">
-      <router-link :to="'/'" class="header-item">
-        <p>Home</p>
-      </router-link>
-      <div class="header-item">
-        <p>Recipes</p>
-      </div>
-      <div class="header-item is-hidden-touch">Quarantine Cooking</div>
-      <div class="header-item is-hidden-touch">Shop</div>
-      <div class="header-item is-hidden-touch search-container">
-        <SearchBar />
+    <div class="header-bar">
+      <div class="header-item-container content-width">
+        <router-link :to="'/'" class="header-item">Home</router-link>
+        <div class="header-item" @click="showDrawer = !showDrawer">
+          <p>
+            Recipes
+            <b-icon v-if="showDrawer" class="header-small-icon" icon="chevron-up" pack="fa" />
+            <b-icon v-else class="header-small-icon" icon="chevron-down" pack="fa" />
+          </p>
+        </div>
+        <router-link
+          :to="{name:'topic', params:{title:'quarantine-cooking'}}"
+          class="header-item is-hidden-touch"
+        >Quarantine Cooking</router-link>
+        <!--
+        <div class="header-item is-hidden-touch">Shop</div>-->
+        <div class="header-item is-hidden-touch search-container">
+          <SearchBar />
+        </div>
       </div>
     </div>
+    <HeaderDrawer :drawerData="drawerData" v-if="showDrawer" />
   </div>
   <!--
   <b-navbar class="header">
@@ -48,20 +57,48 @@
 </template>
 <script>
 import SearchBar from "./SearchBar";
+import HeaderDrawer from "./HeaderDrawer";
+
+import Topic from "@/classes/Topic";
+
 export default {
-  components: { SearchBar },
+  components: { SearchBar, HeaderDrawer },
+  data: function () {
+    return {
+      showDrawer: false,
+      drawerData: Object,
+    };
+  },
+  methods: {},
+  mounted: function () {
+    //todo: server request
+    this.drawerData = {};
+    let category = {
+      name: "easy",
+      topics: [Topic.getDummy(), Topic.getDummy(), Topic.getDummy()],
+    };
+    let category2 = {
+      name: "diets",
+      topics: [Topic.getDummy(), Topic.getDummy(), Topic.getDummy()],
+    };
+    let category3 = {
+      name: "occasions",
+      topics: [Topic.getDummy(), Topic.getDummy(), Topic.getDummy()],
+    };
+    this.drawerData.categories = [category, category2, category3];
+  },
+  computed: {},
 };
 </script>
 
 <style scoped>
-.header {
+.header-bar {
   /*sticky header*/
   position: fixed;
   top: 0;
   z-index: 1000; /*move header to the front, without it header is under images*/
 
   background-color: #18c1ee;
-  height: 2rem;
   font-size: 1.4rem;
   width: 100%;
   height: 3.5rem;
@@ -93,5 +130,9 @@ a:hover {
 }
 .header-item:hover {
   color: yellow;
+}
+
+.header-small-icon {
+  font-size: 1rem;
 }
 </style>

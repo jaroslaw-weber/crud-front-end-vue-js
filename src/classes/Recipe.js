@@ -2,15 +2,7 @@ import faker from "Faker";
 import config from "../../vue.config"
 
 export default class Recipe {
-	getId() {
-		return 0;//todo
-	}
-	setTitle(title) {
-		this.title = title;
-	}
-	getTitle() {
-		return this.title;
-	}
+	
 	static getDummy() {
 		let r = new Recipe();
 		r.author = `${faker.Name.firstName()} ${faker.Name.lastName()}`;
