@@ -5,7 +5,7 @@
         <img class="card-image" :src="cardData.image" />
       </div>
     </div>
-    <p class="card-title">{{cardData.title}}</p>
+    <p class="card-title bold-text">{{cardData.title}}</p>
     <!-- <p>Presented by {{cardData.author}}</p>-->
   </router-link>
 </template>
@@ -48,7 +48,6 @@ export default {
   transform: scale(1.1);
 }
 .card-title {
-  font-family: "Raleway", sans-serif;
 }
 a:link {
   color: black;

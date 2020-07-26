@@ -1,6 +1,6 @@
 <template>
   <div class="card-list is-centered">
-    <p class="list-name">{{titleFormatted}}</p>
+    <p class="list-name bold-text">{{titleFormatted}}</p>
 
     <div class="grid">
       <div v-for="elementData in listData" :key="elementData.id">
@@ -31,7 +31,6 @@ export default {
 </script>
 <style scoped>
 .list-name {
-  font-family: "Raleway", sans-serif;
   padding-top: 1rem;
   padding-bottom: 1rem;
   color: #f43192;

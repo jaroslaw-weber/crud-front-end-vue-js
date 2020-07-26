@@ -2,7 +2,7 @@
   <div class="home">
     <Header />
     <div class="content-wrap content-width">
-      <Featured />
+      <Featured :recipe="featured" />
       <CardList title="trending recipes" :listData="trending" />
       <CardList title="recent recipes" :listData="recent" />
       <b-button class="show-more" @click="showMore()">Show more</b-button>
@@ -40,6 +40,7 @@ export default {
   },
   data: function () {
     return {
+      featured: Recipe.getDummy(),
       //trending recipes list
       trending: [],
       //recently added recipies
@@ -69,21 +70,6 @@ export default {
 };
 </script>
 <style>
-.content-wrap {
-  margin-top: 7rem !important;
-  margin: auto;
-}
-
-@media (max-width: 75rem) {
-  .content-width {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-}
-
-.content-width {
-  max-width: 75rem;
-}
 .show-more {
   margin: 2rem;
 }

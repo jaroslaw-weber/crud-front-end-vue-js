@@ -2,7 +2,7 @@
   <section class="hero newsletter">
     <div class="hero-body">
       <div class="container">
-        <p class="newsletter-title">Easy Recipies and cooking hacks newsletter.</p>
+        <p class="newsletter-title bold-text">Easy Recipies and cooking hacks newsletter.</p>
 
         <b-input class="email-input" placeholder="Your email adress"></b-input>
       </div>
@@ -21,7 +21,6 @@
   text-align: center;
 }
 .newsletter-title {
-  font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
 }
 </style>

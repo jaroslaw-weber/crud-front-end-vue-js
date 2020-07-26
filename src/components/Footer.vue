@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="content-width footer-content">
       <div></div>
-      <div class="privacy-policy-etc fat-font">
+      <div class="privacy-policy-etc bold-text">
         <a>Privacy Policy</a>
         <br />
         <a>User Agreement</a>
@@ -29,8 +29,5 @@ a {
 }
 a:hover {
   color: lightgray;
-}
-.fat-font {
-  font-family: "Raleway", sans-serif;
 }
 </style>

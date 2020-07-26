@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <div class="header bold-text">
     <div class="header-item-container content-width">
       <router-link :to="'/'" class="header-item">
         <p>Home</p>
@@ -62,7 +62,6 @@ export default {
 
   background-color: #18c1ee;
   height: 2rem;
-  font-family: "Raleway", sans-serif;
   font-size: 1.4rem;
   width: 100%;
   height: 3.5rem;
@@ -87,7 +86,10 @@ export default {
   height: 100%;
 }
 a {
-  color: white !important;
+  color: white;
+}
+a:hover {
+  color: yellow;
 }
 .header-item:hover {
   color: yellow;

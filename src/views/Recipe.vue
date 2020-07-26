@@ -3,9 +3,9 @@
     <Header />
     <div class="content-wrap content-width has-text-left">
       <div class="narrow">
-        <p class="recipe-title fat-font">{{recipe.title}}</p>
+        <p class="recipe-title bold-text">{{recipe.title}}</p>
         <p class="recipe-description">{{recipe.description}}</p>
-        <p class="recipe-author fat-font">{{recipe.author}}</p>
+        <p class="recipe-author bold-text">{{recipe.author}}</p>
         <div class="recipe-sns">
           <button class="button recipe-sns-item">
             <b-icon icon="facebook" pack="fa"></b-icon>
@@ -20,20 +20,26 @@
         <img :src="recipe.image" />
         <div class="time">
           <div class="time-item">
-            <p class="fat-font">total time</p>
+            <p class="bold-text">total time</p>
             <p>{{recipe.time.totalTime}}</p>
           </div>
           <div class="time-item">
-            <p class="fat-font">prep time</p>
+            <p class="bold-text">prep time</p>
             <p>{{recipe.time.prepTime}}</p>
           </div>
           <div class="time-item">
-            <p class="fat-font">cook time</p>
+            <p class="bold-text">cook time</p>
             <p>{{recipe.time.cookTime}}</p>
           </div>
         </div>
-        <div>ingredients</div>
-        <div>preparation</div>
+        <div class="preparation-and-ingredients">
+          <div class="preparation-ingredients-column">
+            <Ingredients :ingredients="recipe.ingredients" />
+          </div>
+          <div class="preparation-ingredients-column">
+            <Preparation :preparation="recipe.preparation" />
+          </div>
+        </div>
         <div>nutrition</div>
       </div>
       <div>related recipes</div>
@@ -50,6 +56,8 @@ import Header from "@/components/Header.vue";
 import Newsletter from "@/components/Newsletter.vue";
 import Footer from "@/components/Footer.vue";
 import Recipe from "@/classes/Recipe";
+import Ingredients from "@/components/recipe/Ingredients.vue";
+import Preparation from "@/components/recipe/Preparation.vue";
 
 //single recipe page
 export default {
@@ -58,6 +66,8 @@ export default {
     Header,
     Newsletter,
     Footer,
+    Ingredients,
+    Preparation,
   },
   methods: {},
   data: function () {
@@ -73,19 +83,8 @@ export default {
 };
 </script>
 <style>
-.content-wrap {
-  margin-top: 7rem !important;
-  margin: auto;
-}
-
-.content-width {
-  max-width: 75rem;
-}
 .narrow {
   max-width: 50rem;
-}
-.fat-font {
-  font-family: "Raleway", sans-serif;
 }
 .recipe-title {
   font-size: 3rem;
@@ -117,5 +116,13 @@ export default {
 .time-item:not(:first-child) {
   border-left: 2px solid rgb(233, 232, 232); /*vertical line between items*/
   padding-left: 1rem;
+}
+
+.preparation-and-ingredients {
+  display: flex;
+}
+.preparation-ingredients-column {
+  flex: 2 3;
+  padding-right: 1rem;
 }
 </style>
