@@ -13,8 +13,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
-
 import Header from "@/components/Header.vue";
 import CardList from "@/components/CardList.vue";
 import Newsletter from "@/components/Newsletter.vue";
@@ -22,6 +20,7 @@ import Footer from "@/components/Footer.vue";
 import Recipe from "@/classes/Recipe";
 import Featured from "@/components/Featured.vue";
 
+//home page
 export default {
   name: "Home",
   components: {
@@ -32,6 +31,7 @@ export default {
     Featured,
   },
   methods: {
+    //on show more button
     showMore: function () {
       for (let index = 0; index < 16; index++) {
         this.recent.push(Recipe.getDummy());
@@ -40,11 +40,15 @@ export default {
   },
   data: function () {
     return {
+      //trending recipes list
       trending: [],
+      //recently added recipies
       recent: [],
     };
   },
   mounted: function () {
+    //adding fake data
+    //todo: request data from server
     this.trending.push(Recipe.getDummy());
     this.trending.push(Recipe.getDummy());
     this.trending.push(Recipe.getDummy());

@@ -46,13 +46,12 @@
 </template>
 
 <script>
-// @ is an alias to /src
-
 import Header from "@/components/Header.vue";
 import Newsletter from "@/components/Newsletter.vue";
 import Footer from "@/components/Footer.vue";
 import Recipe from "@/classes/Recipe";
 
+//single recipe page
 export default {
   name: "Home",
   components: {
@@ -60,15 +59,10 @@ export default {
     Newsletter,
     Footer,
   },
-  methods: {
-    showMore: function () {
-      for (let index = 0; index < 16; index++) {
-        this.recent.push(Recipe.getDummy());
-      }
-    },
-  },
+  methods: {},
   data: function () {
     return {
+      //recipe data (title, description etc)
       recipe: Object,
     };
   },

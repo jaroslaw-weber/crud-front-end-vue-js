@@ -1,6 +1,6 @@
 <template>
   <div class="featured container">
-    <div class="is-hidden-mobile">
+    <div class="is-hidden-touch">
       <div class="featured-container-desktop">
         <div class="has-text-left featured-item-desktop">
           <span class="highlight-text">TRY THIS</span>
@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-    <div class="is-hidden-tablet">
+    <div class="is-hidden-desktop">
       <img class="big-image" src="images/recipes/recipe1.jpg" />
       <br />
       <span
@@ -47,7 +47,6 @@
   font-size: 3rem;
 }
 .big-image {
-  padding-right: -2rem;
 }
 .featured {
   margin-left: 3rem;
