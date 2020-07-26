@@ -48,7 +48,7 @@ export default {
 }
 @media (max-width: 800px) {
   .grid {
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 48% 48%;
   }
 }
 @media (min-width: 800px) {

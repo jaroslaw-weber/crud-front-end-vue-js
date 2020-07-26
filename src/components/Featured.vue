@@ -1,19 +1,28 @@
 <template>
   <div class="featured container">
-    <div class="columns">
-      <div class="column has-text-left is-two-thirds">
-        <span class="highlight-text">TRY THIS</span>
-        <br class="try-this-space" />
+    <div class="is-hidden-mobile">
+      <div class="featured-container-desktop">
+        <div class="has-text-left featured-item-desktop">
+          <span class="highlight-text">TRY THIS</span>
+          <br class="try-this-space" />
 
-        <div class="huge-text-container">
-          <span
-            class="highlight-text huge-text hanging-indent"
-          >Pizza with a lot of cheese, over 4000 calories</span>
+          <div class="huge-text-container">
+            <span
+              class="highlight-text huge-text hanging-indent"
+            >Pizza with a lot of cheese, over 4000 calories</span>
+          </div>
+        </div>
+        <div class="featured-item-desktop">
+          <img class="big-image" src="images/recipes/recipe1.jpg" />
         </div>
       </div>
-      <div class="column">
-        <img class="big-image" src="images/recipes/recipe1.jpg" />
-      </div>
+    </div>
+    <div class="is-hidden-tablet">
+      <img class="big-image" src="images/recipes/recipe1.jpg" />
+      <br />
+      <span
+        class="highlight-text hanging-indent text-inside-image"
+      >Pizza with a lot of cheese, over 4000 calories</span>
     </div>
   </div>
 </template>
@@ -35,14 +44,27 @@
   margin-left: 2rem;
 }
 .huge-text {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 .big-image {
-  width: 24rem;
-  height: 14rem;
+  padding-right: -2rem;
 }
 .featured {
   margin-left: 3rem;
   margin-right: 3rem;
+}
+.featured-container-desktop {
+  display: flex;
+}
+.featured-item-desktop {
+  flex: 2 5;
+}
+.featured-item-desktop:first-of-type {
+  /*text going over image effect*/
+  margin-right: -5rem;
+  z-index: 900;
+}
+
+.text-inside-image {
 }
 </style>

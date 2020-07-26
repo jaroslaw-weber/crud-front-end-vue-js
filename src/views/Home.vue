@@ -70,6 +70,13 @@ export default {
   margin: auto;
 }
 
+@media (max-width: 75rem) {
+  .content-width {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
 .content-width {
   max-width: 75rem;
 }

@@ -7,9 +7,9 @@
       <div class="header-item">
         <p>Recipes</p>
       </div>
-      <div class="header-item">Quarantine Cooking</div>
-      <div class="header-item">Shop</div>
-      <div class="header-item search-container">
+      <div class="header-item is-hidden-touch">Quarantine Cooking</div>
+      <div class="header-item is-hidden-touch">Shop</div>
+      <div class="header-item is-hidden-touch search-container">
         <SearchBar />
       </div>
     </div>
